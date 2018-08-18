@@ -2,7 +2,7 @@
  *
  * Written by:
  * Hongli Lai <hongli@telekabel.nl>
- * tkorrovi <tkorrovi@altavista.net> on 2002/02/26. 
+ * tkorrovi <tkorrovi@altavista.net> on 2002/02/26.
  * Andrew Westcott <ajwestco@users.sourceforge.net>
  * Michal Molhanec <michal@molhanec.net>
  *
@@ -12,8 +12,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-//#include <unistd.h>
-#include <windows.h>
+#include <unistd.h>
+//#include <windows.h>
 #include <string.h>
 #include "conio2.h"
 
@@ -179,7 +179,7 @@ _conio_gettext (int left, int top, int right, int bottom,
     SMALL_RECT r;
     CHAR_INFO* buffer;
     COORD size;
-    
+
     __fill_text_info();
     r = (SMALL_RECT) {__CONIO_LEFT + left - 1, __CONIO_TOP + top - 1,
       __CONIO_LEFT + right - 1, __CONIO_TOP + bottom - 1};
@@ -204,7 +204,7 @@ _conio_gettext (int left, int top, int right, int bottom,
 
 void
 puttext (int left, int top, int right, int bottom, struct char_info * buf)
-{ 
+{
     int i;
     SMALL_RECT r;
     CHAR_INFO* buffer;
@@ -348,7 +348,7 @@ getpass (const char * prompt, char * str)
                 }
         }
     }
-    
+
     str[1] = length;
     str[2 + length] = '\0';
     return &str[2];

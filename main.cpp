@@ -9,8 +9,14 @@
 #include<math.h>
 #include<queue>
 #include <fstream>
+#include<unistd.h>
 #define max 50
 using namespace std;
+ void delay(unsigned milliseconds)
+    {
+        usleep(milliseconds * 1000); // takes microseconds
+    }
+
 
 class cust_node
 {
